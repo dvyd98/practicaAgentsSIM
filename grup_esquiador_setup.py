@@ -8,6 +8,7 @@ Created on Fri May  1 12:38:35 2020
 import simpy
 import itertools
 import random
+import settings
 from esquiador_agrupat import esquiador_agrupat
 
 class grup_esquiador_setup(object):

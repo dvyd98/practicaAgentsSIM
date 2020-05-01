@@ -8,6 +8,7 @@ Created on Fri May  1 17:31:41 2020
 import simpy
 import itertools
 import random
+import settings
 from esquiador import esquiador
 from esquiador_agrupat import esquiador_agrupat
 from grup_esquiador_setup import grup_esquiador_setup as gsetup

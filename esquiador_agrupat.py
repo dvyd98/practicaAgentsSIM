@@ -8,6 +8,7 @@ Created on Fri May  1 12:50:46 2020
 import simpy
 import itertools
 import random
+import settings
 
 class esquiador_agrupat(object):
     
@@ -20,7 +21,7 @@ class esquiador_agrupat(object):
         
     def esquiador_agrupat(self, env, name, telecadira, remuntador, pista):
 
-        print('%f: Esquiador %s arriba' % (env.now, name))
+        print('%05.2f: Esquiador %s arriba' % (env.now, name))
         
         while (self.potPujar != 1):
              #print('%f: Esquiador %s espera als seus companys per pujar' % (env.now, name))
@@ -30,14 +31,14 @@ class esquiador_agrupat(object):
         with remuntador.request() as req:
             start = env.now
             yield req
-            print('%f: Esquiador %s puja al remuntador' % (env.now, name))
+            print('%05.2f: Esquiador %s puja al remuntador' % (env.now, name))
             
             yield env.timeout(0.1)
-            print('%f: Esquiador %s ha arribat pel remuntador en %.1f segons' % (env.now, name,
+            print('%05.2f: Esquiador %s ha arribat pel remuntador en %.1f segons' % (env.now, name,
                                                                              env.now - start))
             
         self.isReady = 1
-        print('%f: Esquiador %s esta apunt per baixar' % (env.now, name))
+        print('%05.2f: Esquiador %s esta apunt per baixar' % (env.now, name))
         
         while (self.potBaixar != 1):
             #print('%f: Esquiador %s espera als seus companys per baixar' % (env.now, name))
@@ -46,10 +47,10 @@ class esquiador_agrupat(object):
         with pista.request() as req:
             start = env.now
             yield req
-            print('%f: Esquiador %s comença a baixar per la pista' % (env.now, name))
+            print('%05.2f: Esquiador %s comença a baixar per la pista' % (env.now, name))
             
             yield env.timeout(0.5)
-            print('%f: Esquiador %s acaba de baixar per la pista' % (env.now, name))
+            print('%05.2f: Esquiador %s acaba de baixar per la pista en %.1f segons' % (env.now, name, env.now - start))
                     
                     
         
