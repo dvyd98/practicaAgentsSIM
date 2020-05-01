@@ -1,0 +1,9 @@
+0.1
+0.25
+0.5
+8
+
+# temps que tarda a pujar en remontador
+# temps que tarda a pujar en telecadira
+# temps que tarda en baixar per la pista
+# temps que dura la simulacio

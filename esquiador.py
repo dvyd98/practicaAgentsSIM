@@ -16,16 +16,23 @@ class esquiador(object):
         
     def esquiador(env, name, telecadira, remuntador, pista):
 
-        print('Esquiador %s arriba en l`instant %.1f' % (name, env.now))
+        print('%.lf: Esquiador %s arriba' % (env.now, name))
         
         with remuntador.request() as req:
             start = env.now
             yield req
-            print('Esquiador %s puja al remuntador' % (name))
+            print('%f: Esquiador %s puja al remuntador' % (env.now, name))
             
-            yield env.timeout(1)
-            print('Esquiador %s ha arribat pel remuntador en l`instant %.lf en %.1f segons' % (name, env.now,
+            yield env.timeout(0.1)
+            print('%f: Esquiador %s ha arribat pel remuntador en %.1f segons' % (env.now, name,
                                                                              env.now - start))
+        with pista.request() as req:
+            start = env.now
+            yield req
+            print('%f: Esquiador %s comença a baixar per la pista' % (env.now, name))
+            
+            yield env.timeout(0.5)
+            print('%f: Esquiador %s acaba de baixar per la pista' % (env.now, name))
                     
                     
         
