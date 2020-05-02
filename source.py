@@ -7,6 +7,7 @@ Created on Fri May  1 17:31:41 2020
 
 import simpy
 import itertools
+import numpy as np
 import random
 import settings
 from esquiador import esquiador
@@ -18,14 +19,15 @@ class source(object):
         self.env = env
         self.action = env.process(self.run())
         
-    def source(env, num, telecadira, remuntador, pista1):
+    def source(env, num, telecadira, remuntador1, remuntador2, pista1, pista2, pista3, pista4):
         count_ind = 1
         count_grup = 1
         while(1):
-            if (random.randint(1,4) == 1):
-                env.process(gsetup.grup_esquiador_setup(env, count_grup, telecadira, remuntador, pista1))
+            if (1 == 1):
+                env.process(gsetup.grup_esquiador_setup(env, count_grup, telecadira, remuntador1, remuntador2, pista1, pista2, pista3, pista4))
                 count_grup += 1
             else:
-                env.process(esquiador.esquiador(env, '%d' % count_ind,telecadira,remuntador,pista1))
-                count_ind += 1
-            yield env.timeout(random.randint(1,3))
+                env.process(esquiador.esquiador(env, '%d' % settings.count,telecadira, remuntador1, remuntador2, pista1, pista2, pista3, pista4))
+                settings.count += 1
+            print(settings.fdistribution_arribades())
+            yield env.timeout(settings.fdistribution_arribades())

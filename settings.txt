@@ -1,9 +1,16 @@
-0.1
-0.25
-0.5
-8
-
 # temps que tarda a pujar en remontador
+0.1
 # temps que tarda a pujar en telecadira
-# temps que tarda en baixar per la pista
+0.25
 # temps que dura la simulacio
+10
+## distribucions
+# temps que es tarda a baixar per la pista (normal, exponential) i centre(si es normal) o factor (exponential)
+normal
+0.5
+# temps entre arribades (normal, exponential) i centre(si es normal) o factor (exponential)
+exponential
+0.1
+# numero d'esquiadors dun grup (normal, exponential) i centre(si es normal) o factor (exponential)
+exponential
+0.5

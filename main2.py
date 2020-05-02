@@ -25,5 +25,5 @@ pista4 = simpy.Resource(env, capacity=2)
 #for i in range(4):
 #    env.process(esquiador.esquiador(env, '%d' % i,telecadira,remuntador,pista))
 #env.process(gsetup.grup_esquiador_setup(env, 'test', telecadira, remuntador, pista1, pista2, pista3, pista4))
-env.process(sc.source(env, 0, telecadira, remuntador1, pista1))
+env.process(sc.source(env, 0, telecadira, remuntador1, remuntador2, pista1, pista2, pista3, pista4))
 env.run(until=settings.time_duration)

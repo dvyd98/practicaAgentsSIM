@@ -7,6 +7,7 @@ Created on Fri May  1 12:50:46 2020
 
 import simpy
 import itertools
+import numpy as np
 import random
 import settings
 
@@ -19,7 +20,7 @@ class esquiador_agrupat(object):
         self.potPujar = 0
         self.env = env
         
-    def esquiador_agrupat(self, env, name, telecadira, remuntador, pista):
+    def esquiador_agrupat(self, env, name, telecadira, remuntador1, remuntador2, pista1, pista2, pista3, pista4):
 
         print('%05.2f: Esquiador %s arriba' % (env.now, name))
         
@@ -28,7 +29,7 @@ class esquiador_agrupat(object):
             yield env.timeout(0.1)
         
 
-        with remuntador.request() as req:
+        with remuntador1.request() as req:
             start = env.now
             yield req
             print('%05.2f: Esquiador %s puja al remuntador' % (env.now, name))
@@ -44,7 +45,7 @@ class esquiador_agrupat(object):
             #print('%f: Esquiador %s espera als seus companys per baixar' % (env.now, name))
             yield env.timeout(0.1)
             
-        with pista.request() as req:
+        with pista1.request() as req:
             start = env.now
             yield req
             print('%05.2f: Esquiador %s comença a baixar per la pista' % (env.now, name))
