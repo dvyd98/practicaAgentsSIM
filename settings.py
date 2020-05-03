@@ -12,6 +12,15 @@ def init():
     
     global output
     
+    global remunt1_cua
+    global remunt2_cua
+    global telecadira_cua
+    global pista1_cua
+    global pista2_cua
+    global pista3_cua
+    global pista4_cua
+    global ticks_count
+    
     global time_remontador
     
     global time_telecadira
@@ -27,8 +36,21 @@ def init():
     global distribution_num_esquiadors
     global distribution_num_esquiadors_mean
     
+    global capacitat_remuntador
+    global capacitat_telecadira
+    global capacitat_pista
+    
     count = 1
     output = 0
+    
+    remunt1_cua = []
+    remunt2_cua = []
+    telecadira_cua = []
+    pista1_cua = []
+    pista2_cua = []
+    pista3_cua = []
+    pista4_cua = []
+    ticks_count = 0
     
     f = open("settings.txt", "r")
     f.readline()
@@ -49,6 +71,15 @@ def init():
     f.readline()
     distribution_num_esquiadors = f.readline().strip()
     distribution_num_esquiadors_mean = float(f.readline())
+    
+    f.readline()
+    f.readline()
+    
+    capacitat_remuntador = int(f.readline())
+    f.readline()
+    capacitat_telecadira = int(f.readline())
+    f.readline()
+    capacitat_pista = int(f.readline())
     
 def fdistribution_pista():
     if (distribution_pista in "normal"):

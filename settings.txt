@@ -1,16 +1,23 @@
-# temps que tarda a pujar en remontador
-0.1
+3# temps que tarda a pujar en remontador
+0.2
 # temps que tarda a pujar en telecadira
-0.25
+0.35
 # temps que dura la simulacio
 10
 ## distribucions
 # temps que es tarda a baixar per la pista (normal, exponential) i centre(si es normal) o factor (exponential)
-normal
+exponential
 0.5
 # temps entre arribades (normal, exponential) i centre(si es normal) o factor (exponential)
 exponential
 0.1
 # numero d'esquiadors dun grup (normal, exponential) i centre(si es normal) o factor (exponential)
-exponential
-0.5
+normal
+4
+## capacitat resources (Han de ser INTEGERS)
+# capacitat remuntadors
+2
+# capacitat telecadira
+4
+# capacitat pistes
+2

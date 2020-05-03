@@ -20,7 +20,7 @@ class grup_esquiador_setup(object):
     def grup_esquiador_setup(env, num, telecadira, remuntador1, remuntador2, pista1, pista2, pista3, pista4):
         count = num
         #while (count < 5):
-        num_esquiadors = random.randint(2,4)
+        num_esquiadors = int(settings.fdistribution_num_esquiadors())
         esqlist = []
         
         for i in range(num_esquiadors):
