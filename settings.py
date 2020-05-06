@@ -19,7 +19,6 @@ def init():
     global pista2_cua
     global pista3_cua
     global pista4_cua
-    global ticks_count
     
     global time_remontador
     
@@ -50,7 +49,6 @@ def init():
     pista2_cua = []
     pista3_cua = []
     pista4_cua = []
-    ticks_count = 0
     
     f = open("settings.txt", "r")
     f.readline()

@@ -10,7 +10,7 @@ exponential
 0.5
 # temps entre arribades (normal, exponential) i centre(si es normal) o factor (exponential)
 exponential
-0.1
+0.01
 # numero d'esquiadors dun grup (normal, exponential) i centre(si es normal) o factor (exponential)
 normal
 4
