@@ -81,18 +81,27 @@ def init():
     
 def fdistribution_pista():
     if (distribution_pista in "normal"):
-        return np.random.normal(loc=distribution_pista_mean)
+        ret = np.random.normal(loc=distribution_pista_mean)
+        while (ret < 0):
+            ret = np.random.normal(loc=distribution_pista_mean)
+        return ret
     elif (distribution_pista in "exponential"):
         return np.random.exponential(scale=distribution_pista_mean)
     
 def fdistribution_arribades():
     if (distribution_arribades in "normal"):
-        return np.random.normal(loc=distribution_arribades_mean)
+        ret = np.random.normal(loc=distribution_arribades_mean)
+        while (ret < 0):
+            ret = np.random.normal(loc=distribution_arribades_mean)
+        return ret
     elif (distribution_arribades in "exponential"):
         return np.random.exponential(scale=distribution_arribades_mean)
     
 def fdistribution_num_esquiadors():
     if (distribution_num_esquiadors in "normal"):
-        return np.random.normal(loc=distribution_num_esquiadors_mean)
+        ret = np.random.normal(loc=distribution_num_esquiadors_mean)
+        while (ret < 0):
+            ret = np.random.normal(loc=distribution_num_esquiadors_mean)
+        return ret
     elif (distribution_num_esquiadors in "exponential"):
         return np.random.exponential(scale=distribution_num_esquiadors_mean)

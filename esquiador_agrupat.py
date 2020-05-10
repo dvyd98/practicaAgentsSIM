@@ -6,7 +6,6 @@ Created on Fri May  1 12:50:46 2020
 """
 
 import simpy
-import itertools
 import numpy as np
 import random
 import settings

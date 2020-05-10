@@ -1,4 +1,4 @@
-3# temps que tarda a pujar en remontador
+# temps que tarda a pujar en remontador
 0.2
 # temps que tarda a pujar en telecadira
 0.35

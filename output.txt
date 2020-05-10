@@ -1,0 +1,9 @@
+Output: 158.00 
+Throughput: 15.80 
+Mean content of remuntador1 queue: 244.08 
+Mean content of remuntador2 queue: 243.63 
+Mean content of telecadira queue: 00.88 
+Mean content of pista1 queue: 14.86 
+Mean content of pista2 queue: 15.14 
+Mean content of pista3 queue: 15.38 
+Mean content of pista4 queue: 15.64 
