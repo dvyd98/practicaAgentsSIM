@@ -32,11 +32,13 @@ class esquiador(object):
             elif (len(remuntador1.queue) <= len(remuntador2.queue)):
                 remuntador = remuntador1
                 remuntador_name = "1"
-            else:
+            elif (len(remuntador2.queue) <= len(telecadira.queue)):
                 remuntador = remuntador2
                 remuntador_name = "2"
+            else:
+                remuntador_name = "0"
         
-        if (remuntador_name == "0"): # telecadira buit
+        if (remuntador_name == "0"): # telecadira menys cua
             with telecadira.request() as req:
                 start = env.now
                 yield req
